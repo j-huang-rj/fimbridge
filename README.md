@@ -4,7 +4,7 @@ A lightweight, adaptive gateway for **Ollama** that translates Fill-In-the-Middl
 
 ## ✨ Features
 
-- 🔄 **FIM Dialect Translation** — Automatically translates between FIM marker formats (e.g., `<fim_prefix>` → `<|fim_prefix|>`)
+- 🔄 **FIM Dialect Translation** — Automatically translates between FIM marker formats
 - ⚡ **Request Coalescing** — Debounces rapid IDE completion requests to reduce upstream load
 - 📊 **Adaptive Debounce** — Dynamically adjusts debounce timing based on upstream latency
 - 🔒 **Circuit Breaker** — Protects against cascading failures with automatic recovery
@@ -98,7 +98,7 @@ Override defaults via environment variables in `.env`:
 curl -X POST http://localhost:11435/api/generate \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "qwen2.5-coder",
+    "model": "qwen3-coder-30b",
     "prompt": "<fim_prefix>def hello():<fim_suffix>    pass<fim_middle>"
   }'
 ```
